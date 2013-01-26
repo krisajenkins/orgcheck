@@ -38,8 +38,7 @@ cal
 #+RESULTS:
 | 2 | 4 | 6 |
 
-
-** How Does it Handle Checklists?
+** How Does it Handle Checklists? [33%]
 
 - [X] One
 - [ ] Two
