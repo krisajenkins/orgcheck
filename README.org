@@ -1,0 +1,46 @@
+* What's This
+
+It's just me mucking about with [[http://github.com][Github's]] org-mode renderer.
+
+** How Does It Handle Tables?
+
+|---+-------|
+|   |     5 |
+|   |     6 |
+|   |     8 |
+|   |     9 |
+|---+-------|
+| _ | Total |
+|   |    28 |
+|---+-------|
+#+TBLFM: $Total=vsum(@II-1..@I)
+
+** How Does It Handle Code?
+
+#+begin_src sh
+cal
+#+end_src
+
+#+RESULTS:
+| January | 2013 |    |    |    |    |    |
+|      Su |   Mo | Tu | We | Th | Fr | Sa |
+|       1 |    2 |  3 |  4 |  5 |    |    |
+|       6 |    7 |  8 |  9 | 10 | 11 | 12 |
+|      13 |   14 | 15 | 16 | 17 | 18 | 19 |
+|      20 |   21 | 22 | 23 | 24 | 25 | 26 |
+|      27 |   28 | 29 | 30 | 31 |    |    |
+|         |      |    |    |    |    |    |
+
+#+begin_src elisp
+  (mapcar (lambda (x) (* 2 x)) (list 1 2 3))
+#+end_src
+
+#+RESULTS:
+| 2 | 4 | 6 |
+
+
+** How Does it Handle Checklists?
+
+- [X] One
+- [ ] Two
+- [ ] Three
